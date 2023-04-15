@@ -39,7 +39,7 @@ export const i18n = new VueI18n({
 const loadedLanguages = ['en'] // 我们的预装默认语言
 
 function setI18nLanguage (lang) {
-  i18n.locale = lang
+  i18n.global.locale = lang
   axios.defaults.headers.common['Accept-Language'] = lang
   document.querySelector('html').setAttribute('lang', lang)
   return lang
